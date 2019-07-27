@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        tools:context=".MainActivity">
+
+        <Button
+            android:id="@+id/bt_dataBinding"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="databinding"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toTopOf="@id/bt_viewModel" />
+
+        <Button
+            android:id="@+id/bt_viewModel"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:text="viewModel与LiveData"
+            android:textAllCaps="false"
+            app:layout_constraintTop_toBottomOf="@id/bt_dataBinding" />
+
+        <Button
+            android:id="@+id/bt_demo"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:text="Bing每日一图demo"
+            android:textAllCaps="false"
+            app:layout_constraintTop_toBottomOf="@id/bt_viewModel" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

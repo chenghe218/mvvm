@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.example.myapplication.viewmodel.vm.MainViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/tv_text_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@{@string/formatStr(data.users.name,data.users.city,data.users.age)}" />
+
+        <Button
+            android:id="@+id/bt_activity"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:text="在Activity内改变数据" />
+
+        <fragment
+            android:id="@+id/fragment_one"
+            android:name="com.example.myapplication.viewmodel.fragment.OneFragment"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="15dp" />
+
+        <fragment
+            android:id="@+id/fragment_two"
+            android:name="com.example.myapplication.viewmodel.fragment.TwoFragment"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="15dp" />
+
+
+    </LinearLayout>
+</layout>
